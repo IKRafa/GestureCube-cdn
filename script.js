@@ -1,147 +1,49 @@
-const translations = {
-    id: {
-        pageTitle: "Bali Rentals",
-        navHome: "Beranda",
-        navVehicles: "Daftar Kendaraan",
-        navContact: "Tentang Kami",
-        stickyButton: "Hubungi Sekarang",
-        stickyButtonHref: "https://wa.me/6281999919042?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20rental%20kendaraan%20Anda.",
-        heroHeading: "Bali Rentals",
-        heroParagraph: "Temukan kendaraan impian Anda untuk liburan di Bali.",
-        vehiclesSectionHeading: "Daftar Kendaraan",
-        motorbikesHeading: "Motor",
-        nmaxPrice: "Rp 170.000 / Hari",
-        nmaxDescription: "Desain yang modern dan sporty, performa mesin yang bertenaga, fitur-fitur canggih, dan kenyamanan berkendara.",
-        nmaxBookBtn: "Pesan Sekarang",
-        nmaxBookBtnHref: "https://wa.me/6281999919042?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20rental%20kendaraan%20Anda.",
-        scoopyPrice: "Rp 100.000 / Hari",
-        scoopyDescription: "Desain retro-modern yang sangat stylish dan unik dan memiliki fitur-fitur modern yang praktis.",
-        scoopyBookBtn: "Pesan Sekarang",
-        scoopyBookBtnHref: "https://wa.me/6281999919042?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20rental%20kendaraan%20Anda.",
-        filanoPrice: "Rp 120.000 / Hari",
-        filanoDescription: "desainnya yang premium, klasik, mewah, dan elegan, memiliki daya tarik yang tinggi dan fitur hybrid yang canggih.",
-        filanoBookBtn: "Pesan Sekarang",
-        filanoBookBtnHref: "https://wa.me/6281999919042?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20rental%20kendaraan%20Anda.",
-        varioPrice: "Rp 100.000 / Hari",
-        varioDescription: "Desain sporty, modern, dan agresif, Performa mesin bertenaga, Sangat irit bahan bakar, Lincah.",
-        varioBookBtn: "Pesan Sekarang",
-        varioBookBtnHref: "https://wa.me/6281999919042?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20rental%20kendaraan%20Anda.",
-        carsHeading: "Mobil",
-        agyaManualPrice: "Rp 250.000 / Hari",
-        agyaManualMonthlyPrice: "Rp 6.000.000 / Bulan",
-        agyaManualDescription: "Sangat irit BBM, harga sewa super terjangkau, cocok untuk menjelajah Bali sendirian atau berdua dengan budget minim.",
-        agyaManualBookBtn: "Pesan Sekarang",
-        agyaManualBookBtnHref: "https://wa.me/6281999919042?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20rental%20kendaraan%20Anda.",
-        agyaMaticPrice: "Rp 300.000 / Hari",
-        agyaMaticMonthlyPrice: "Rp 6.700.000 / Bulan",
-        agyaMaticDescription: "Nyaman dan praktis di lalu lintas padat, desainnya stylish dan modern, pas buat yang mau keliling kota dengan santai dan tetap gaya.",
-        agyaMaticBookBtn: "Pesan Sekarang",
-        agyaMaticBookBtnHref: "https://wa.me/6281999919042?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20rental%20kendaraan%20Anda.",
-        avanzaManualPrice: "Rp 400.000 / Hari",
-        avanzaManualMonthlyPrice: "Rp 9.000.000 / Bulan",
-        avanzaManualDescription: "Kabin luas dan nyaman, muat hingga 7 penumpang, sangat ideal untuk liburan keluarga atau perjalanan rombongan.",
-        avanzaManualBookBtn: "Pesan Sekarang",
-        avanzaManualBookBtnHref: "https://wa.me/6281999919042?text=Halo%2C%20saya%20ingin%20bertanya%20tentang%20rental%20kendaraan%20Anda.",
-        aboutHeading: "Tentang Bali Rentals",
-        contactWhatsApp: "Kontak kami : +62 819-9991-9042",
-        contactEmail: "email kami : sutanta_85@yahoo.co.id",
-        aboutText:
-            "Selamat datang di Bali Rentals, solusi transportasi terpercaya di Bali. Kami menyediakan motor dan mobil berkualitas dengan layanan cepat, mudah, dan dapat diandalkan. Kendaraan kami selalu terawat, menawarkan kenyamanan dan fleksibilitas dengan harga kompetitif. Pemesanan dapat dilakukan langsung melalui WhatsApp untuk respon cepat dan efisien. Nikmati perjalanan Anda di Bali dengan kendaraan terbaik dari Bali Rentals!",
-        bugReportText: "Jika ada Bug atau masalah, silahkan hubungi kami melalui WhatsApp",
-        copyrightText: "© 2025 Bali Rentals. Hak cipta dilindungi undang-undang.",
-    },
-    en: {
-        pageTitle: "Bali Rentals",
-        navHome: "Home",
-        navVehicles: "Vehicle List",
-        navContact: "About Us",
-        stickyButton: "Contact Now",
-        stickyButtonHref: "https://wa.me/6281999919042?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20your%20vehicle%20rentals.",
-        heroHeading: "Bali Rentals",
-        heroParagraph: "Find your dream vehicle for your Bali vacation.",
-        vehiclesSectionHeading: "Vehicle List",
-        motorbikesHeading: "Motorbikes",
-        nmaxPrice: "Rp 170.000 / Day",
-        nmaxDescription: "Modern and sporty design, powerful engine performance, advanced features, and driving comfort.",
-        nmaxBookBtn: "Book Now",
-        nmaxBookBtnHref: "https://wa.me/6281999919042?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20your%20vehicle%20rentals.",
-        scoopyPrice: "Rp 100.000 / Day",
-        scoopyDescription: "A very stylish and unique retro-modern design and has practical modern features.",
-        scoopyBookBtn: "Book Now",
-        scoopyBookBtnHref: "https://wa.me/6281999919042?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20your%20vehicle%20rentals.",
-        filanoPrice: "Rp 120.000 / Day",
-        filanoDescription: "Its premium, classic, luxurious and elegant design has high appeal and advanced hybrid features.",
-        filanoBookBtn: "Book Now",
-        filanoBookBtnHref: "https://wa.me/6281999919042?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20your%20vehicle%20rentals.",
-        varioPrice: "Rp 100.000 / Day",
-        varioDescription: "Sporty, modern and aggressive design, powerful engine performance, very fuel efficient, agile.",
-        varioBookBtn: "Book Now",
-        varioBookBtnHref: "https://wa.me/6281999919042?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20your%20vehicle%20rentals.",
-        carsHeading: "Cars",
-        agyaManualPrice: "Rp 250.000 / Day",
-        agyaManualMonthlyPrice: "Rp 6.000.000 / Month",
-        agyaManualDescription: "Very fuel efficient, super affordable rental prices, suitable for exploring Bali alone or with a partner on a minimal budget.",
-        agyaManualBookBtn: "Book Now",
-        agyaManualBookBtnHref: "https://wa.me/6281999919042?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20your%20vehicle%20rentals.",
-        agyaMaticPrice: "Rp 300.000 / Day",
-        agyaMaticMonthlyPrice: "Rp 6.700.000 / Month",
-        agyaMaticDescription: "Comfortable and practical in heavy traffic, the design is stylish and modern, perfect for those who want to get around town in a relaxed and stylish manner.",
-        agyaMaticBookBtn: "Book Now",
-        agyaMaticBookBtnHref: "https://wa.me/6281999919042?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20your%20vehicle%20rentals.",
-        avanzaManualPrice: "Rp 400.000 / Day",
-        avanzaManualMonthlyPrice: "Rp 9.000.000 / Month",
-        avanzaManualDescription: "The spacious and comfortable cabin, accommodating up to 7 passengers, is ideal for family vacations or group trips.",
-        avanzaManualBookBtn: "Book Now",
-        avanzaManualBookBtnHref: "https://wa.me/6281999919042?text=Hello%2C%20I%20would%20like%20to%20ask%20about%20your%20vehicle%20rentals.",
-        aboutHeading: "About Bali Rentals",
-        contactWhatsApp: "Contact us : +62 819-9991-9042",
-        contactEmail: "email us : sutanta_85@yahoo.co.id",
-        aboutText:
-            "Welcome to Bali Rentals, your trusted transportation solution in Bali. We provide quality motorbikes and cars with fast, easy, and reliable service. Our vehicles are always well-maintained, offering comfort and flexibility at competitive prices. Bookings can be made directly via WhatsApp for quick and efficient response. Enjoy your trip in Bali with the best vehicles from Bali Rentals!",
-        bugReportText: "If there are any bugs or issues, please contact us via WhatsApp",
-        copyrightText: "© 2025 Bali Rentals. All rights reserved.",
-    },
-};
-function applyTranslations(lang) {
-    document.documentElement.lang = lang;
-    for (const key in translations[lang]) {
-        const element = document.getElementById(key);
-        if (element && !key.endsWith("Href")) {
-            element.textContent = translations[lang][key];
-        }
-        if (key.endsWith("Href")) {
-            const originalId = key.replace("Href", "");
-            const linkElement = document.getElementById(originalId);
-            if (linkElement && translations[lang][key]) {
-                linkElement.href = translations[lang][key];
-            }
-        }
-    }
-    document.querySelectorAll(".lang-button").forEach((button) => {
-        if (button.dataset.lang === lang) {
-            button.classList.add("active");
-        } else {
-            button.classList.remove("active");
-        }
-    });
-    const newUrl = new URL(window.location);
-    newUrl.searchParams.set("lang", lang);
-    history.pushState({ lang: lang }, "", newUrl.toString());
-}
-document.querySelectorAll(".lang-button").forEach((button) => {
-    button.addEventListener("click", () => {
-        applyTranslations(button.dataset.lang);
-    });
-});
-const urlParams = new URLSearchParams(window.location.search);
-const initialLang = urlParams.get("lang") || "id";
-applyTranslations(initialLang);
-window.addEventListener("popstate", (event) => {
-    if (event.state && event.state.lang) {
-        applyTranslations(event.state.lang);
-    } else {
-        const currentUrlParams = new URLSearchParams(window.location.search);
-        const langFromUrl = currentUrlParams.get("lang") || "id";
-        applyTranslations(langFromUrl);
-    }
-});
+const CONFIG={DEBUG:!0,CAMERA:{FOV:60,NEAR:0.1,FAR:1000,Z_POS:6,},INTERACTION:{PINCH_THRESHOLD:0.05,GRAB_RADIUS:50,ROTATION_SENSITIVITY:0.005,},COLORS:{DEFAULT:0x00ffff,ACTIVE:0xff00ff,HOVER:0xff3333,GRID:0x222222,},};class MathUtils{static lerp(start,end,amt){return(1-amt)*start+amt*end}
+static dist(x1,y1,x2,y2){return Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2))}
+static hexToRgb(hex){hex=hex.replace(/^#/,"");let bigint=parseInt(hex,16);return{r:(bigint>>16)&255,g:(bigint>>8)&255,b:bigint&255,}}}
+class Logger{static log(message){if(!CONFIG.DEBUG)return;const consoleDiv=document.getElementById("debug-console");const time=new Date().toLocaleTimeString();const line=document.createElement("div");line.textContent=`> ${message}`;consoleDiv.prepend(line);if(consoleDiv.children.length>6)
+consoleDiv.removeChild(consoleDiv.lastChild);}}
+class AudioManager{constructor(){this.ctx=new(window.AudioContext||window.webkitAudioContext)();this.masterGain=this.ctx.createGain();this.masterGain.gain.value=0.2;this.masterGain.connect(this.ctx.destination);this.enabled=!1}
+resume(){if(this.ctx.state==="suspended"){this.ctx.resume().then(()=>{this.enabled=!0;Logger.log("Audio System Online")})}else{this.enabled=!0}}
+playGrabSound(){if(!this.enabled)return;const osc=this.ctx.createOscillator();const gain=this.ctx.createGain();osc.type="sine";osc.frequency.setValueAtTime(800,this.ctx.currentTime);osc.frequency.exponentialRampToValueAtTime(1200,this.ctx.currentTime+0.1);gain.gain.setValueAtTime(0.5,this.ctx.currentTime);gain.gain.exponentialRampToValueAtTime(0.01,this.ctx.currentTime+0.15);osc.connect(gain);gain.connect(this.masterGain);osc.start();osc.stop(this.ctx.currentTime+0.2)}}
+class PhysicsVertex{constructor(x,y,z){this.currentPosition=new THREE.Vector3(x,y,z);this.isDragging=!1}
+update(){}
+setPosition(posVector){this.currentPosition.copy(posVector)}}
+class ElasticCube{constructor(scene,size=2){this.scene=scene;this.size=size;this.physicsVertices=[];this.cornerMarkers=[];this.activeColor=CONFIG.COLORS.DEFAULT;this.initGeometry();this.initMarkers()}
+initGeometry(){const half=this.size/2;const corners=[[-half,-half,-half],[half,-half,-half],[-half,half,-half],[half,half,-half],[-half,-half,half],[half,-half,half],[-half,half,half],[half,half,half],];this.physicsVertices=corners.map((c)=>new PhysicsVertex(c[0],c[1],c[2]));this.indices=[0,1,3,0,3,2,1,5,7,1,7,3,5,4,6,5,6,7,4,0,2,4,2,6,2,3,7,2,7,6,4,5,1,4,1,0,];this.geometry=new THREE.BufferGeometry();this.updateBufferAttributes();this.geometry.setIndex(this.indices);this.wireMaterial=new THREE.MeshBasicMaterial({color:0xffffff,wireframe:!0,transparent:!0,opacity:0.15,});this.solidMaterial=new THREE.MeshBasicMaterial({color:this.activeColor,transparent:!0,opacity:0.6,side:THREE.DoubleSide,});this.meshWire=new THREE.Mesh(this.geometry,this.wireMaterial);this.meshSolid=new THREE.Mesh(this.geometry,this.solidMaterial);this.scene.add(this.meshSolid);this.scene.add(this.meshWire)}
+initMarkers(){const markerGeo=new THREE.BoxGeometry(0.1,0.1,0.1);this.physicsVertices.forEach((v,index)=>{const mat=new THREE.MeshBasicMaterial({color:0xffff00});const mesh=new THREE.Mesh(markerGeo,mat);this.scene.add(mesh);this.cornerMarkers.push(mesh)})}
+update(){this.cornerMarkers.forEach((marker,i)=>{marker.position.copy(this.physicsVertices[i].currentPosition)});this.updateBufferAttributes()}
+updateBufferAttributes(){const positions=[];this.physicsVertices.forEach((v)=>{positions.push(v.currentPosition.x,v.currentPosition.y,v.currentPosition.z)});this.geometry.setAttribute("position",new THREE.Float32BufferAttribute(positions,3));this.geometry.attributes.position.needsUpdate=!0;this.geometry.computeVertexNormals()}
+setColor(hexColor){this.activeColor=hexColor;this.solidMaterial.color.set(hexColor)}
+getClosestVertexIndex(screenX,screenY,camera,width,height){let closestDist=Infinity;let closestIndex=-1;this.physicsVertices.forEach((v,i)=>{const projected=v.currentPosition.clone().project(camera);const vx=((projected.x+1)/2)*width;const vy=(-(projected.y-1)/2)*height;const d=MathUtils.dist(screenX,screenY,vx,vy);if(d<CONFIG.INTERACTION.GRAB_RADIUS&&d<closestDist){closestDist=d;closestIndex=i}});return closestIndex}
+setHighlight(index){this.cornerMarkers.forEach((m,i)=>{if(i===index){m.material.color.set(CONFIG.COLORS.HOVER);m.scale.set(2.0,2.0,2.0)}else{m.material.color.set(0xffff00);m.scale.set(1,1,1)}})}}
+class HandManager{constructor(){this.hands=null;this.onResultsCallback=null}
+init(videoElement){this.hands=new Hands({locateFile:(file)=>`https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`,});this.hands.setOptions({maxNumHands:2,modelComplexity:1,minDetectionConfidence:0.7,minTrackingConfidence:0.5,});this.hands.onResults((results)=>{if(this.onResultsCallback)this.onResultsCallback(results);});const camera=new Camera(videoElement,{onFrame:async()=>{await this.hands.send({image:videoElement})},width:1280,height:720,});camera.start()}
+setCallback(fn){this.onResultsCallback=fn}
+detectPinch(landmarks){const thumbTip=landmarks[4];const indexTip=landmarks[8];const distance=MathUtils.dist(thumbTip.x,thumbTip.y,indexTip.x,indexTip.y);return{isPinching:distance<CONFIG.INTERACTION.PINCH_THRESHOLD,x:(thumbTip.x+indexTip.x)/2,y:(thumbTip.y+indexTip.y)/2,}}
+detectFist(landmarks){const fingers=[{tip:8,pip:6},{tip:12,pip:10},{tip:16,pip:14},{tip:20,pip:18},];const isFist=fingers.every((f)=>landmarks[f.tip].y>landmarks[f.pip].y);return{isFist:isFist,x:landmarks[9].x,y:landmarks[9].y}}}
+class SceneManager{constructor(containerId){this.container=document.getElementById(containerId);this.width=window.innerWidth;this.height=window.innerHeight;this.scene=new THREE.Scene();this.scene.fog=new THREE.FogExp2(0x050505,0.02);this.camera=new THREE.PerspectiveCamera(CONFIG.CAMERA.FOV,this.width/this.height,CONFIG.CAMERA.NEAR,CONFIG.CAMERA.FAR);this.camera.position.z=CONFIG.CAMERA.Z_POS;this.renderer=new THREE.WebGLRenderer({alpha:!0,antialias:!0,});this.renderer.setSize(this.width,this.height);this.renderer.setPixelRatio(window.devicePixelRatio);this.container.appendChild(this.renderer.domElement);this.addLights();const gridHelper=new THREE.GridHelper(30,30,0x444444,0x111111);gridHelper.position.y=-3;this.scene.add(gridHelper);window.addEventListener("resize",()=>this.onWindowResize(),!1)}
+addLights(){const ambientLight=new THREE.AmbientLight(0xffffff,0.6);this.scene.add(ambientLight);const dirLight=new THREE.DirectionalLight(0xffffff,0.8);dirLight.position.set(5,10,7);this.scene.add(dirLight)}
+onWindowResize(){this.width=window.innerWidth;this.height=window.innerHeight;this.camera.aspect=this.width/this.height;this.camera.updateProjectionMatrix();this.renderer.setSize(this.width,this.height)}
+render(){this.renderer.render(this.scene,this.camera)}}
+class UIManager{constructor(canvasId){this.canvas=document.getElementById(canvasId);this.ctx=this.canvas.getContext("2d");this.resize();window.addEventListener("resize",()=>this.resize());this.initColorWheel()}
+resize(){this.canvas.width=window.innerWidth;this.canvas.height=window.innerHeight}
+clear(){this.ctx.clearRect(0,0,this.canvas.width,this.canvas.height)}
+drawHandSkeleton(landmarks,color){const ctx=this.ctx;const w=this.canvas.width;const h=this.canvas.height;ctx.fillStyle=color;ctx.strokeStyle=color;ctx.lineWidth=2;for(let lm of landmarks){const cx=lm.x*w;const cy=lm.y*h;ctx.beginPath();ctx.arc(cx,cy,3,0,2*Math.PI);ctx.fill()}}
+initColorWheel(){const cCanvas=document.getElementById("color-wheel-canvas");const ctx=cCanvas.getContext("2d");const w=cCanvas.width;const h=cCanvas.height;const cx=w/2;const cy=h/2;const r=w/2-2;for(let angle=0;angle<360;angle++){ctx.beginPath();ctx.moveTo(cx,cy);ctx.arc(cx,cy,r,angle*(Math.PI/180),(angle+1)*(Math.PI/180));ctx.closePath();ctx.fillStyle=`hsl(${angle}, 100%, 50%)`;ctx.fill()}}
+getColorAt(screenX,screenY){const cCanvas=document.getElementById("color-wheel-canvas");const rect=cCanvas.getBoundingClientRect();if(screenX>=rect.left&&screenX<=rect.right&&screenY>=rect.top&&screenY<=rect.bottom){const x=screenX-rect.left;const y=screenY-rect.top;const ctx=cCanvas.getContext("2d");const pixel=ctx.getImageData(x,y,1,1).data;if(pixel[3]===0)return null;return `#${[pixel[0], pixel[1], pixel[2]]
+              .map((c) => c.toString(16).padStart(2, "0"))
+              .join("")}`}
+return null}
+updateStatus(active){const el=document.getElementById("status-dot");const txt=document.getElementById("system-status");if(active){el.classList.add("status-active");txt.textContent="TRACKING ACTIVE";txt.style.color="#00ff00"}else{el.classList.remove("status-active");txt.textContent="WAITING FOR HANDS...";txt.style.color="#aaaaaa"}}}
+class Engine{constructor(){this.sceneMgr=new SceneManager("three-container");this.uiMgr=new UIManager("hud-canvas");this.handMgr=new HandManager();this.audioMgr=new AudioManager();this.cube=new ElasticCube(this.sceneMgr.scene);this.state={draggingVertexIndex:-1,lastFistX:null,lastFistY:null,};this.update=this.update.bind(this)}
+async start(){const video=document.getElementById("webcam-feed");this.handMgr.init(video);this.handMgr.setCallback((results)=>this.handleHandInput(results));setTimeout(()=>{document.getElementById("loading-screen").style.display="none";this.audioMgr.resume()},2000);this.update()}
+update(){requestAnimationFrame(this.update);this.cube.update();this.sceneMgr.render()}
+handleHandInput(results){this.uiMgr.clear();const landmarks=results.multiHandLandmarks;const handedness=results.multiHandedness;if(!landmarks||landmarks.length===0){this.uiMgr.updateStatus(!1);if(this.state.draggingVertexIndex!==-1){this.cube.physicsVertices[this.state.draggingVertexIndex].isDragging=!1;this.state.draggingVertexIndex=-1}
+return}
+this.uiMgr.updateStatus(!0);for(let i=0;i<landmarks.length;i++){const handLms=landmarks[i];const label=handedness[i].label;const skeletonColor=label==="Right"?"#00ffff":"#00ff00";this.uiMgr.drawHandSkeleton(handLms,skeletonColor);if(label==="Left"){const pinchInfo=this.handMgr.detectPinch(handLms);const screenX=(1-pinchInfo.x)*window.innerWidth;const screenY=pinchInfo.y*window.innerHeight;if(pinchInfo.isPinching){const pickedColor=this.uiMgr.getColorAt(screenX,screenY);if(pickedColor){this.cube.setColor(pickedColor);Logger.log(`Color Applied: ${pickedColor}`)}}
+const hoverIndex=this.cube.getClosestVertexIndex(screenX,screenY,this.sceneMgr.camera,window.innerWidth,window.innerHeight);this.cube.setHighlight(hoverIndex);if(pinchInfo.isPinching){if(this.state.draggingVertexIndex===-1&&hoverIndex!==-1){this.state.draggingVertexIndex=hoverIndex;this.cube.physicsVertices[hoverIndex].isDragging=!0;this.audioMgr.playGrabSound();Logger.log("Sculpting Started...")}
+if(this.state.draggingVertexIndex!==-1){const vertex=this.cube.physicsVertices[this.state.draggingVertexIndex];const vec=new THREE.Vector3((screenX/window.innerWidth)*2-1,-(screenY/window.innerHeight)*2+1,0.5);vec.unproject(this.sceneMgr.camera);vec.sub(this.sceneMgr.camera.position).normalize();const distance=vertex.currentPosition.distanceTo(this.sceneMgr.camera.position);const newPos=this.sceneMgr.camera.position.clone().add(vec.multiplyScalar(distance));vertex.setPosition(newPos)}}else{if(this.state.draggingVertexIndex!==-1){this.cube.physicsVertices[this.state.draggingVertexIndex].isDragging=!1;this.state.draggingVertexIndex=-1;Logger.log("Sculpting Ended.")}}}
+if(label==="Right"){const fistInfo=this.handMgr.detectFist(handLms);const screenX=(1-fistInfo.x)*window.innerWidth;const screenY=fistInfo.y*window.innerHeight;if(fistInfo.isFist){if(this.state.lastFistX!==null){const dx=screenX-this.state.lastFistX;const dy=screenY-this.state.lastFistY;const cam=this.sceneMgr.camera;const theta=Math.atan2(cam.position.x,cam.position.z);const phi=Math.acos(cam.position.y/cam.position.length());const targetTheta=theta-dx*CONFIG.INTERACTION.ROTATION_SENSITIVITY;const targetPhi=Math.max(0.1,Math.min(Math.PI-0.1,phi-dy*CONFIG.INTERACTION.ROTATION_SENSITIVITY));const radius=cam.position.length();cam.position.x=radius*Math.sin(targetPhi)*Math.sin(targetTheta);cam.position.y=radius*Math.cos(targetPhi);cam.position.z=radius*Math.sin(targetPhi)*Math.cos(targetTheta);cam.lookAt(0,0,0)}
+this.state.lastFistX=screenX;this.state.lastFistY=screenY}else{this.state.lastFistX=null;this.state.lastFistY=null}}}}}
+window.addEventListener("DOMContentLoaded",()=>{const engine=new Engine();engine.start().catch((err)=>{console.error(err);alert("Gagal mengakses kamera. Pastikan izin diberikan.")});document.body.addEventListener("click",()=>{engine.audioMgr.resume()})})
